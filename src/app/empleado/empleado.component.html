@@ -1,0 +1,20 @@
+<div class="contenedor">
+
+  <p>Aquí iría un empleado desde empleado component con nombre {{nombre}}, apellidos {{apellido}}, edad {{getEdad()+10}}
+    que <!--Uso de dobles corchetes-->
+    pertenece a la empresa {{empresa}} y tiene {{experiencia}} años de experiencia eso significa que es un programador
+    {{experiencia>2? "Senior" : "Junior"}}/p> <!-- Uso de Operador ternario-->
+  <p id="botontxt">{{texto.value}}
+  <p id="keyupTxt">{{textoK.value}}</p>
+
+  <input type="text" #texto placeholder="Escribe y pulsa Enviar">
+  <!--AL USAR # DECLARAMOS UNA VARIABLE QUE PODREMOS USAR EN OTROS LADOS HACIENDO REFERENCIA A SU VALOR CON texto.value -->
+  <input type="button" value="Enviar" (click)="callTxt(texto.value)">
+  <!-- EL EVENTO (click) LLAMA A LA FUNCIÓN (En el .TS) llamada   -->
+  <br />
+  <br />
+  <input type="text" #textoK placeholder="KeyUp" (keyup)=0 [disabled]="habilitado">
+  <!-- EL VALOR DE DISABLED SERÁ DETERMINADO EN EL ARCHIVO .TS-->
+  <br /><br />
+  Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado">
+  {{getRegistroUsuario()}} <!--Esto llama a la función en el archivo .ts que cambia el valor de usuRegistrado-->

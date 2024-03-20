@@ -1,0 +1,15 @@
+.contenedor {
+  border: solid blue 2px;
+}
+
+p {
+  font-weight: bold;
+}
+
+#botontxt {
+  color: brown;
+}
+
+#keyupTxt {
+  color: green;
+}

@@ -1,0 +1,8 @@
+.contenedor {
+  font-family: 'Courier New', Courier, monospace;
+  border: solid red 5px;
+}
+
+.titulo {
+  color: red
+}
