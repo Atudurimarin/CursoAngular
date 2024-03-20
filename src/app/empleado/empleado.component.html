@@ -16,5 +16,14 @@
   <input type="text" #textoK placeholder="KeyUp" (keyup)=0 [disabled]="habilitado">
   <!-- EL VALOR DE DISABLED SERÁ DETERMINADO EN EL ARCHIVO .TS-->
   <br /><br />
-  Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado">
+  {{textoDeRegistro}}: <input type="checkbox" id="registro" [checked]="usuRegistrado" (click)="mostrarVentana()"
+    (click)="cambiaTexto()">
   {{getRegistroUsuario()}} <!--Esto llama a la función en el archivo .ts que cambia el valor de usuRegistrado-->
+  <br>
+  <br>
+  P: <input type="radio" name="situacioL" value="paro" id="paro" (click)="setTextoLaboral($event)">
+  <!-- $event pasa el evento por parámetro a una función del componente-->
+  T: <input type="radio" name="situacioL" value="trabajo" id="trabajando" (click)="setTextoLaboral($event)">
+  <!-- setTextoLaboral() recibe el evento por parámetro-->
+  {{textoLaboral}}
+  <br>
