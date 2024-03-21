@@ -11,8 +11,8 @@ export class EmpleadoComponent implements OnInit {
   apellido: String = "Diaz";
   private edad = 18; // <-- para que no sea accesible desde fuera de la clase
   experiencia = 5;    // y sólo sean accesibles mediante getters y setters
-  empresa: String = "W2M"
-  habilitado = false;  // ESTE VALOR DETERMINARÁ EL VALOR DE LA PROPIEDAD DEL ELEMENTO HTML
+  empresa: String = "Google"
+  deshabilitado = false;  // ESTE VALOR DETERMINARÁ EL VALOR DE LA PROPIEDAD DEL ELEMENTO HTML
   usuRegistrado = false; // ESTE VALOR DETERMINARÁ EL VALOR DE LA PROPIEDAD DEL ELEMENTO HTML
   textoDeRegistro = "No hay nadie registrado";
   trabajando = true;
@@ -49,6 +49,7 @@ export class EmpleadoComponent implements OnInit {
 
 
   }
+
 
 
   constructor() { }

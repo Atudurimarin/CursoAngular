@@ -13,7 +13,7 @@
   <!-- EL EVENTO (click) LLAMA A LA FUNCIÓN (En el .TS) llamada   -->
   <br />
   <br />
-  <input type="text" #textoK placeholder="KeyUp" (keyup)=0 [disabled]="habilitado">
+  <input type="text" #textoK placeholder="KeyUp" (keyup)=0 [disabled]="deshabilitado">
   <!-- EL VALOR DE DISABLED SERÁ DETERMINADO EN EL ARCHIVO .TS-->
   <br /><br />
   {{textoDeRegistro}}: <input type="checkbox" id="registro" [checked]="usuRegistrado" (click)="mostrarVentana()"
@@ -27,3 +27,4 @@
   <!-- setTextoLaboral() recibe el evento por parámetro-->
   {{textoLaboral}}
   <br>
+  <input type="text" [(ngModel)]="empresa">
