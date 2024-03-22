@@ -7,5 +7,27 @@ import { Component } from "@angular/core";
 })
 
 export class EmpleadosComponent {
-  empresa = "W2M"    // <-- Variable que se va a usar en la plantila
+  empresa = "W2M";    // <-- Variable que se va a usar en la plantila
+  vistaMensaje = false;
+  mensaje = "Esto se ve si vistaMensaje es true";
+  entradas = [
+    {titulo:"Python cada día más presente"},
+    {titulo:"Java cada día más presente"},
+    {titulo:"Javascript cada vez más funcional"},
+    {titulo:"Kotlin potencia para tus apps"},
+  ];
+
+
+
+
+  setear(event: Event):void {
+    if ((<HTMLInputElement>event.target).value=="true"){
+      this.vistaMensaje=true;
+    }
+
+    else {this.vistaMensaje=false;}
+
+  }
+
+
 }

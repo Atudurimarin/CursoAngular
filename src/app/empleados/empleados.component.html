@@ -2,7 +2,30 @@
 
   <h1 id="empl">Empleados de la empresa {{empresa}}</h1>
 
+  <p *ngIf="vistaMensaje; else esFalse">{{mensaje}}</p>
+  <!--Si vistaMensaje en el ts es true se imprime {{mensaje}}
+      Si vistaMensaje en el ts es false se imprime esFalse que contiene el ng-template-->
+
+  <ng-template #esFalse> <!--Esto sólo se imprime si se llama a la variable #esFalse-->
+    <p>Esto se ve si vistaMensaje es false</p>
+  </ng-template>
+
+  setear a true: <input type="radio" name="cambio" value=true (click)="setear($event)">
+  setear a false: <input type="radio" name="cambio" value=false (click)="setear($event)">
+
+  <br><br>
+
+  <ul>
+    <li *ngFor="let entrada of entradas; index as i">{{i+1+" "}}{{entrada.titulo}}</li>
+  </ul>
+          <!--DOS MANERAS DE ESCRIBIRLO-->
+  <ng-template ngFor let-entrada [ngForOf]="entradas" let-i="index">
+    <li>{{i+1+" "}}{{entrada.titulo}}</li>
+  </ng-template>
+
   <app-empleado></app-empleado>
+
+
 
 
 </div>
